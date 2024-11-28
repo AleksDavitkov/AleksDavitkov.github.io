@@ -14,7 +14,7 @@ body {
     height: 100vh; /* full height of the viewport */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -83,7 +83,6 @@ h1, p {
     text-align: center;
     border-radius: 8px;
     margin: auto; /* center the container horizontally and vertically */
-    margin-top: 270px; /* small margin for spacing below the nav */
     position: relative;
     z-index: 2; /* higher z-index to stay on top of the gif container */
 }
@@ -107,8 +106,8 @@ h1, p {
 .gif-container {
     position: absolute;
     bottom: 44px;
-    right: 0; /* Align it to the right edge of the viewport */
-    width: 20%; /* Set the desired width */
+    right: 0; /* align to right edge of the viewport */
+    width: 20%; /* desired width */
     display: flex;
     justify-content: center;
     z-index: 1; /* lower z-index to stay behind other content */
@@ -133,7 +132,7 @@ footer p {
     font-size: 1rem;
 }
 
-/* For larger screens (desktop) */
+/* larger screens (desktop) */
 @media (min-width: 1024px) {
     .gif-container {
         right: 10px; /* keep the same positioning for large screens */
@@ -141,7 +140,7 @@ footer p {
     }
 }
 
-/* For smaller screens (laptops, tablets) */
+/* smaller screens (laptops, tablets) */
 @media (max-width: 1024px) {
     .gif-container {
         right: 5%; /* adjust the position slightly for laptops/tablets */
