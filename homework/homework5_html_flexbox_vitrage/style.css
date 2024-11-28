@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 700px;
+    height: 700px;
+    border: 8px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.red-box {
+    width: 73%;
+    height: 73%;
+    background-color: red;
+    border-color: black;
+    border-left: 10px solid;
+    border-bottom: 10px solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.blue-box {
+    width: 27%;
+    height: 28%;
+    background-color: blue;
+    border-color: black;
+    border-top: 10px solid;
+    border-right: 5px solid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.light-yellow-box1 {
+    width: 27%;
+    height: 32%;
+    background-color: rgb(235, 235, 219);
+    border-color: black;
+    border-bottom: 25px solid;
+    border-right: 5px solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.light-yellow-box2 {
+    width: 27%;
+    height: 42%;
+    background-color: rgb(235, 235, 219);
+    border-color: black;
+    border-bottom: 3px solid;
+    border-top: 20px solid;
+    border-right: 5px solid;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.light-yellow-box3 {
+    width: 68%;
+    height: 28%;
+    background-color: rgb(235, 235, 219);
+    border-color: black;
+    border-top: 10px solid;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    position: absolute;
+    bottom: 0;
+    left: 27%;
+}
+
+.light-yellow-box4 {
+    width: 6%;
+    height: 14%;
+    background-color: rgb(235, 235, 219);
+    border-color: black;
+    border-top: 10px solid;
+    border-bottom: 10px solid;
+    border-left: 9px solid;
+    position: absolute;
+    bottom: 14%;
+    right: 0;
+}
+
+.yellow-box {
+    width: 6%;
+    height: 14%;
+    background-color: yellow;
+    border-color: black;
+    border-top: 10px solid;
+    border-left: 9px solid;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

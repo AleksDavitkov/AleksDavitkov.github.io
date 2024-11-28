@@ -75,13 +75,15 @@ h1, p {
 }
 
 .content-container {
-    width: 30%;  /* adjust width as needed */
+    width: 30%; /* make it more adaptive */
+    height: 40%;
     padding: 20px;
-    border: 1px solid orange;  /* orange border */
-    background-color: rgba(0, 0, 0, 0.5); /* transparent background */
-    text-align: center;  /* centers the text */
-    border-radius: 8px;  /* rounded corners */
-    margin-top: 300px; /* space between the nav and content */
+    border: 1px solid orange;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 8px;
+    margin: auto; /* center the container horizontally and vertically */
+    margin-top: 250px; /* small margin for spacing below the nav */
 }
 
 .content-container h1,
@@ -100,6 +102,20 @@ h1, p {
     color: #ff8c00;  /* color change on hover */
 }
 
+.gif-container {
+    position: absolute;
+    bottom: 44px; /* gap from the footer */
+    right: 10px; /* distance from the right edge */
+    width: 40%; /* adjust width as needed */
+    display: flex;
+    justify-content: center; 
+}
+
+.gif-container img {
+    max-width: 100%; /* makes the GIF is responsive */
+    height: auto; /* keeps the aspect ratio of the GIF */
+}
+
 footer {
     width: 100%;
     background-color: #03030d;
@@ -112,4 +128,20 @@ footer {
 footer p {
     font-weight: 300;
     font-size: 1rem;
+}
+
+/* For larger screens (desktop) */
+@media (min-width: 1024px) {
+    .gif-container {
+        right: 10px; /* Keep the same positioning for large screens */
+        width: 50%; /* Keep the width for desktop */
+    }
+}
+
+/* For smaller screens (laptops, tablets) */
+@media (max-width: 1024px) {
+    .gif-container {
+        right: 5%; /* Adjust the position slightly for laptops/tablets */
+        width: 60%; /* Adjust width if you want the GIF bigger or smaller */
+    }
 }
