@@ -76,14 +76,16 @@ h1, p {
 
 .content-container {
     width: 30%; /* make it more adaptive */
-    height: 40%;
+    min-height: 40vh;
     padding: 20px;
     border: 1px solid orange;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     border-radius: 8px;
     margin: auto; /* center the container horizontally and vertically */
-    margin-top: 250px; /* small margin for spacing below the nav */
+    margin-top: 270px; /* small margin for spacing below the nav */
+    position: relative;
+    z-index: 2; /* higher z-index to stay on top of the gif container */
 }
 
 .content-container h1,
@@ -104,16 +106,17 @@ h1, p {
 
 .gif-container {
     position: absolute;
-    bottom: 44px; /* gap from the footer */
-    right: 10px; /* distance from the right edge */
-    width: 40%; /* adjust width as needed */
+    bottom: 44px;
+    right: 0; /* Align it to the right edge of the viewport */
+    width: 20%; /* Set the desired width */
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    z-index: 1; /* lower z-index to stay behind other content */
 }
 
 .gif-container img {
-    max-width: 100%; /* makes the GIF is responsive */
-    height: auto; /* keeps the aspect ratio of the GIF */
+    max-width: 100%;
+    height: auto;
 }
 
 footer {
@@ -133,15 +136,15 @@ footer p {
 /* For larger screens (desktop) */
 @media (min-width: 1024px) {
     .gif-container {
-        right: 10px; /* Keep the same positioning for large screens */
-        width: 50%; /* Keep the width for desktop */
+        right: 10px; /* keep the same positioning for large screens */
+        width: 50%; /* keep the width for desktop */
     }
 }
 
 /* For smaller screens (laptops, tablets) */
 @media (max-width: 1024px) {
     .gif-container {
-        right: 5%; /* Adjust the position slightly for laptops/tablets */
-        width: 60%; /* Adjust width if you want the GIF bigger or smaller */
+        right: 5%; /* adjust the position slightly for laptops/tablets */
+        width: 50%; /* adjust width GIF bigger or smaller */
     }
 }
