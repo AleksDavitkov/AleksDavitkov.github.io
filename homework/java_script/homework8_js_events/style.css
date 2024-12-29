@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#createTableBtn {
+    margin-bottom: 20px;
+}
+
+#table-container {
+    margin-top: 20px;
+}
