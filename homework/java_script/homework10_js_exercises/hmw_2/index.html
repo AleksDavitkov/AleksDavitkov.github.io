@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+</head>
+<body>
+    <h1>Phone Book</h1>
+
+    <!-- Add contact -->
+    <form>
+    <label>First Name:</label>
+    <input type="text" id="name">
+    <br><br>
+
+    <label>Last Name:</label>
+    <input type="text" id="lastname">
+    <br><br>
+
+    <label>Phone Number:</label>
+    <input type="number" id="phone">
+    <br><br>
+
+    <button id="saveButton">Save</button>
+    </form>
+
+    <!-- Display contacts -->
+
+     <h2>Contact List</h2>
+
+     <table border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody id="contactsTableBody">
+            <!-- Contacts appear here -->
+        </tbody>
+     </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
