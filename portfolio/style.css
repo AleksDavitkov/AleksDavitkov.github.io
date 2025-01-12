@@ -78,7 +78,7 @@ h1, p {
     display: flex; /* flexbox to arrange the divs side by side */
     flex-direction: row;
     justify-content: space-between; /* space out the divs */
-    width: 60%; /* adjust the width to fit both containers */
+    width: 55%; /* adjust the width to fit both containers */
     min-height: 40vh;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -121,6 +121,7 @@ footer {
     width: 100%;
     background-color: #03030d;
     color: #dcdcdc;
+    border-top: 1px solid rgb(40, 40, 40); /* top border color */
     text-align: center;
     padding: 10px 0;
     position: relative;
