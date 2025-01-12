@@ -48,6 +48,3 @@ function atm() {
 }
 
 atm();
-
-  
-  
