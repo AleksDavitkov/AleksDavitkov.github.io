@@ -1,7 +1,5 @@
 // ==== Number to Words Converter ====
 
-// Functions
-
 // Declaration
 function convertNumberToWords(num) {
     if (isNaN(num) || num < 0 || num > 1000000) {
