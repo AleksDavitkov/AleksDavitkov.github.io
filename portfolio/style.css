@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
     font-family: 'Kanit', sans-serif;
     background-image: url('images/star-citizen.jpg'); /* background image path */
@@ -16,6 +17,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 body::before {
@@ -29,6 +31,7 @@ body::before {
     z-index: -1; /* place background behind the content */
 }
 
+/* Navbar Styles */
 nav {
     background-color: #03030d;
     color: white;
@@ -69,21 +72,26 @@ nav a:hover {
     color: #ffffff; /* lighter grey color when hovered */
 }
 
+/* Content and Section Styles */
 h1, p {
     font-weight: 300; /* medium weight for the h1 and p tag */
     color: #dcdcdc;
 }
 
+/* Dark background for the content container */
 .content-container {
-    display: flex; /* flexbox to arrange the divs side by side */
-    flex-direction: row;
-    justify-content: space-between; /* space out the divs */
-    width: 55%; /* adjust the width to fit both containers */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* gap between the divs */
+    justify-content: center;
+    align-items: center;
+    width: 55%; /* width fit for containers */
+    height: 60%;
     min-height: 40vh;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px; /* inside the container */
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
-    border-radius: 8px;
+    border-radius: 15px;
     margin: auto;
     position: relative;
     z-index: 2;
@@ -117,6 +125,7 @@ h1, p {
     color: rgb(107, 184, 255);  /* color change on hover */
 }
 
+/* Footer Styles */
 footer {
     width: 100%;
     background-color: #03030d;
@@ -133,6 +142,7 @@ footer p {
     font-size: 1rem;
 }
 
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column; /* stack the divs vertically on smaller screens */
@@ -143,4 +153,132 @@ footer p {
         width: 100%; /* make the divs take up the full width */
         margin-left: 0; /* remove the margin */
     }
+}
+
+/* Section Styles (for individual divs) */
+.section { 
+    position: relative;
+    width: 30%; /* width of each section */
+    height: 250px; /* height of each section */
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(0, 162, 255);
+    border-radius: 35px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section h1 {
+    margin-bottom: 20px; /* space between h1 and the button */
+    font-size: 1.6rem;
+}
+
+/* When Section is Expanded */
+.section.expanded {
+    position: fixed;
+    top: 50%; /* vertical center */
+    left: 50%; /* horizontal center */
+    transform: translate(-50%, -50%) scale(1); /* center and scale the div */
+    width: 60%;
+    max-width: 800px; /* for large screens */
+    height: auto;
+    min-height: 300px;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.8); /* background color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); /* shadow for focus */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, width 0.3s ease;
+}
+
+/* Content inside Expanded Section */
+.content {
+    display: none; /* initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* center on the screen */
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    width: 30%; /* base width */
+    height: auto; /* base height */
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    pointer-events: none; /* prevent interaction when hidden */
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.content.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    opacity: 1; /* make visible */
+    width: 70%; /* expanded width */
+    height: 80%; /* expanded height */
+}
+
+.content a {
+    font-size: 1rem;
+    transition: font-size 0.3s ease;
+    margin: 10px 0; /* spacing between links */
+}
+
+.content.visible a {
+    font-size: 1.3rem; /* font size for links in expanded view */
+    font-weight: 300;
+}
+
+/* When Content is Visible in Expanded Section */
+.section.expanded .content {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/* Button Styles (Expand & Close) */
+.expand-btn, .close-btn {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    padding: 13px 30px;
+    border-radius: 30px;
+    border: 2px solid rgba(0, 162, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.expand-btn:hover, .close-btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 162, 255, 0.7);
+    color: #fff;
+}
+
+.expand-btn:focus, .close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 162, 255, 1);
+}
+
+/* Dimmed Background Effect */
+body.dimmed {
+    pointer-events: none; /* prevent interaction with the background */
+}
+
+body.dimmed .section.expanded {
+    pointer-events: auto; /* allow interaction with expanded section */
 }
