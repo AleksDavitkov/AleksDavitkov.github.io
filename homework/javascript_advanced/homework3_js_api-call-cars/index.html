@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Cars-API</title>
+    <script src="fetch-cars.js" defer></script>
+</head>
+<body>
+
+    <h1>Car Data</h1>
+
+    <!-- Filtering -->
+  <select id="filterType">
+    <option value="">All Types</option>
+    <option value="SUV">SUV</option>
+    <option value="Sedan">Sedan</option>
+    <option value="Hatchback">Hatchback</option>
+    <option value="Convertible">Convertible</option>
+    <option value="Truck">Truck</option>
+    <option value="Coupe">Coupe</option>
+  </select>
+  
+  <select id="filterBrand">
+    <option value="">All Brands</option>
+    <option value="Volkswagen">Volkswagen</option>
+    <option value="Toyota">Toyota</option>
+    <option value="Ford">Ford</option>
+    <option value="BMW">BMW</option>
+    <option value="Chevrolet">Chevrolet</option>
+    <option value="Mercedes-Benz">Mercedes-Benz</option>
+    <option value="Honda">Honda</option>
+    <option value="Nissan">Nissan</option>
+    <option value="Hyundai">Hyundai</option>
+    <option value="Mazda">Mazda</option>
+    <option value="Ram">Ram</option>
+    <option value="Audi">Audi</option>
+    <option value="Kia">Kia</option>
+    <option value="Subaru">Subaru</option>
+    <option value="Fiat">Fiat</option>
+  </select>
+  
+  <button id="searchBtn">Search</button>
+
+    <table id="cars">
+        <thead>
+            <tr>
+                <th>Model</th>
+                <th>Brand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data display -->
+        </tbody>
+    </table>
+
+</body>
+</html>
