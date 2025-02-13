@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fetch Cars-API</title>
+    <link rel="stylesheet" href="style.css">
     <script src="fetch-cars.js" defer></script>
 </head>
 <body>
 
-    <h1>Car Data</h1>
+  <h1>Car Data</h1>
 
-    <!-- Filtering -->
+  <!-- Filtering -->
+  <input type="text" id="filterModel" placeholder="Enter Model Name">
+
+  <input type="number" id="filterDoors" placeholder="Enter Number of Doors">
+
+  <input type="number" id="filterHorsepower" placeholder="Max Horsepower">
+
   <select id="filterType">
     <option value="">All Types</option>
     <option value="SUV">SUV</option>
@@ -39,14 +46,62 @@
     <option value="Subaru">Subaru</option>
     <option value="Fiat">Fiat</option>
   </select>
+
+  <select id="filterColor">
+    <option value="">All Colors</option>
+    <option value="White">White</option>
+    <option value="Silver">Silver</option>
+    <option value="Blue">Blue</option>
+    <option value="Black">Black</option>
+    <option value="Red">Red</option>
+    <option value="Gray">Gray</option>
+    <option value="Green">Green</option>
+    <option value="Yellow">Yellow</option>
+    <option value="Orange">Orange</option>
+    <option value="Purple">Purple</option>
+  </select>  
+
+  <select id="filterGasType">
+    <option value="">All Gas Types</option>
+    <option value="Diesel">Diesel</option>
+    <option value="Petrol">Petrol</option>
+    <option value="Gasoline">Gasoline</option>
+    <option value="Hybrid">Hybrid</option>
+    <option value="Electric">Electric</option>
+  </select>
   
+  <!-- Buttons -->
+  <button id="resetBtn">Reset Filters</button>
   <button id="searchBtn">Search</button>
 
+  <!-- Current condition -->
+  <fieldset>
+    <legend>Condition</legend>
+    <label>
+      <input type="radio" name="filterCondition" value="" checked>
+      All Cars
+    </label>
+    <label>
+      <input type="radio" name="filterCondition" value="new">
+      New Cars
+    </label>
+    <label>
+      <input type="radio" name="filterCondition" value="old">
+      Old Cars
+    </label>
+  </fieldset>
+
+  <!-- Table -->
     <table id="cars">
         <thead>
             <tr>
-                <th>Model</th>
+                <th>Type</th>
                 <th>Brand</th>
+                <th>Model</th>
+                <th>Door Num.</th>
+                <th>Gas Type</th>
+                <th>Color</th>
+                <th>Horsepower</th>
             </tr>
         </thead>
         <tbody>
