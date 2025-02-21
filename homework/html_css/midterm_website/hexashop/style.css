@@ -1,0 +1,1261 @@
+/* Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Remove horizontal scroll */
+}
+
+/* =========== NAVIGATION  ===========*/
+
+nav {
+  background-color: white;
+  padding: 0.9rem 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img.nav-logo {
+  max-width: 200px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 170px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #333;
+  padding: 10px 20px;
+  font-weight: 550;
+}
+
+nav ul li a.home {
+  color: rgb(155, 155, 155);
+}
+
+nav ul li a:hover {
+  color: grey;
+  background-color: transparent;
+}
+
+/* Dropdown Container */
+nav ul li.dropdown {
+  position: relative;
+}
+
+/* Dropdown Menu */
+nav ul li .dropdown-menu {
+  display: block; /* Always present, but hidden */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 180px;
+
+  opacity: 0;
+  visibility: hidden; /* Hide from interaction */
+  transform: translateY(10px); /* Slightly lower position */
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Move back to normal */
+}
+
+/* Dropdown Items */
+nav ul li .dropdown-menu li a {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(242, 242, 242);
+  color: #333;
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav ul li .dropdown-menu li a:hover {
+  color: #a1a1a1;
+  background-color: #f5f5f5;
+}
+
+/* Dropdown Arrow */
+nav ul li .dropdown-arrow {
+  font-size: 12px;
+  margin-left: 5px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  top: -0.3em;
+  transform: scaleX(1.5);
+}
+
+/* Sticky Nav */
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow when sticky */
+}
+
+/* =========== BUTTONS  ===========*/
+
+.purchase-btn,
+.discover-more-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 12px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.purchase-btn:hover,
+.discover-more-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.discover-more-btn-reverse {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.discover-more-btn-reverse:hover {
+  background-color: black;
+  color: white;
+}
+
+/* =========== DIV SECTION 1  ===========*/
+
+/* Wrapper */
+.wrapper {
+  border-top: 3px dotted rgb(230, 230, 230);
+}
+
+/* Container Section */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  margin: 40px;
+  padding: 20px 20px 60px;
+  width: 100vw;
+  min-height: 54rem;
+  height: auto;
+  border-bottom: 3px dotted rgb(230, 230, 230);
+}
+
+/* Box 1 Styles */
+#box1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left; /* Keep text to the left */
+    height: 100%;
+    padding-left: 11%; /* Spacing on the left */
+    color: white;
+    background: url('images/left-banner-image.jpg') center / cover no-repeat;
+}
+
+/* Typography for Box 1 */
+#box1 h1, #box1 h2 {
+    margin: 0;
+}
+
+#box1 h2 {
+    font-size: 3rem; 
+    font-weight: bolder;
+    margin-bottom: 17px;
+}
+
+#box1 p {
+    font-size: 16px; 
+    font-style: italic;
+}
+
+/* Box 2 Styles */
+#box2 {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 100%;
+    height: 100%;
+    color: white;
+    background: url('images/baner-right-image-01.jpg') center / cover no-repeat;
+    position: relative;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Text Styling for Box 2 */
+#box2 p {
+    font-style: italic;
+}
+
+/* Pseudo-Element for Dark Overlay */
+#box2::after {
+    content: '';
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease; /* Smooth darkening effect */
+    z-index: 1;
+}
+
+/* Dark Overlay on Hover */
+#box2:hover::after {
+    background-color: rgba(29, 29, 29, 0.96);
+}
+
+/* Overlay Content */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    text-align: center;
+    display: none; /* Hidden by default */
+    z-index: 2;
+}
+
+/* Show Overlay on Hover */
+#box2:hover .overlay {
+    display: block;
+}
+
+/* Box 3 Styles */
+#box3 {
+    grid-column: 4 / 5; 
+    grid-row: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    font-size: 100%; 
+    height: 100%;
+    color: white;
+    background: url('images/baner-right-image-02.jpg') center / cover no-repeat;
+    position: relative;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Text Styling for Box 3 */
+#box3 p {
+    font-style: italic;
+}
+
+/* Pseudo-Element for Dark Overlay */
+#box3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease; /* Smooth darkening effect */
+    z-index: 1;
+}
+
+/* Dark Overlay on Hover */
+#box3:hover::after {
+    background-color: rgba(29, 29, 29, 0.96);
+}
+
+/* Show Overlay on Hover */
+#box3:hover .overlay {
+    display: block;
+}
+
+/* Box 4 Styles */
+#box4 {
+    grid-column: 3 / 4;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-size: 100%; 
+    height: 100%; 
+    color: white;
+    background: url('images/baner-right-image-03.jpg') center / cover no-repeat;
+    position: relative;
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Text Styling for Box 4 */
+#box4 p {
+    font-style: italic;
+}
+
+/* Pseudo-Element for Dark Overlay */
+#box4::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: background-color 0.3s ease; /* Smooth darkening effect */
+    z-index: 1;
+}
+
+/* Dark Overlay on Hover */
+#box4:hover::after {
+    background-color: rgba(29, 29, 29, 0.96);
+}
+
+/* Show Overlay on Hover */
+#box4:hover .overlay {
+    display: block;
+}
+
+/* Box 5 Styles */
+#box5 {
+    grid-column: 4 / 5;
+    grid-row: 2; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 100%;
+    height: 100%;
+    color: white;
+    background: url('images/baner-right-image-04.jpg') center / cover no-repeat;
+    position: relative; 
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Text Styling for Box 5 */
+#box5 p {
+    font-style: italic;
+}
+
+/* Pseudo-Element for Dark Overlay */
+#box5::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0); 
+    transition: background-color 0.3s ease; /* Smooth darkening effect */
+    z-index: 1;
+}
+
+/* Dark Overlay on Hover */
+#box5:hover::after {
+    background-color: rgba(29, 29, 29, 0.96);
+}
+
+/* Show Overlay on Hover */
+#box5:hover .overlay {
+    display: block;
+}
+
+.box {
+    text-align: center;
+    padding: 0;
+    font-size: 24px;
+    border: 1px solid #ccc;
+}
+
+/* =========== SECTION 2: MEN'S LATEST PRODUCTS =========== */
+
+/* Section 2 Wrapper */
+.section-2-wrapper {
+  width: 100%;
+  border-bottom: 3px dotted rgb(230, 230, 230); /* Dotted bottom border */
+  margin-top: 3%; /* Space above */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+/* Section Layout */
+.section-2 {
+  width: 80%;
+  text-align: center;
+  max-width: 1200px; /* Restrict max width */
+  margin: auto;
+}
+
+#latest-heading {
+  font-size: 34px; 
+  text-align: left; 
+  margin-left: 50px; 
+  margin-bottom: 5px; /* Space below heading */
+  color: #333;
+  font-weight: bolder;
+}
+
+#details-paragraph {
+  font-size: 14px;
+  color: #959595;
+  font-style: italic;
+  margin-top: -8px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+/* Section Inner (Product Display) */
+#section-2-inner {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Gap between */
+  margin-top: 5%;
+  padding-bottom: 7.5%;
+  position: relative;
+  width: 100%;
+}
+
+/* Product Heading */
+#section-2-inner .product h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 30px 0 5px; /* Spacing around */
+  text-align: left;
+}
+
+/* Product Description (Price) */
+#section-2-inner .product p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #9a9a9a;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* Product Heading (Name and Stars) */
+.product-heading {
+  font-size: 22px; 
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: space-between; /* Keep stars to the right */
+  align-items: center;
+  margin: 10px 0; /* Spacing around */
+}
+
+/* Star Rating */
+.product-heading .stars {
+  font-size: 18px; /* Star size */
+  margin-left: 10px; /* Space between text and stars */
+}
+
+/* Product Image Square */
+.square {
+  width: 350px;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 72px; 
+  color: white;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Product Image Backgrounds */
+#square-1 {
+  background-image: url('images/men-01.jpg');
+}
+
+#square-2 {
+  background-image: url('images/men-02.jpg');
+}
+
+#square-3 {
+  background-image: url('images/men-03.jpg');
+}
+
+/* Arrow Button */
+.arrow-button {
+  background: none; /* Transparent background */
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  border: 1px solid;
+  font-size: 30px; 
+  color: #646464; 
+  cursor: pointer;
+  position: absolute;
+  top: 30%; 
+}
+
+.left-arrow {
+  left: -30px; /* Position left arrow */
+}
+
+.right-arrow {
+  right: -30px; /* Position right arrow */
+}
+
+/* Hover Icons */
+.hover-icons {
+  position: absolute;
+  bottom: -50px; /* Initially hidden */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Space between icons */
+  transition: bottom 0.4s ease, opacity 0.4s ease; /* Smooth animation */
+}
+
+/* Hover State for Icons */
+.square:hover .hover-icons {
+  bottom: 30px; /* Icons come into view */
+  opacity: 1; /* Fully visible */
+}
+
+/* Icon Style */
+.icon {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px; /* Icon size */
+  color: #333333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* =========== SECTION 2: WOMEN'S LATEST PRODUCTS =========== */
+
+/* Section Wrapper */
+.section-3-wrapper {
+  width: 100%;
+  border-bottom: 3px dotted rgb(230, 230, 230); /* Dotted bottom border */
+  margin-top: 5%; /* Space above */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+#latest-heading-2 {
+  font-size: 34px; 
+  text-align: left; 
+  margin-left: 50px; 
+  margin-bottom: 5px; /* Space below heading */
+  color: #333;
+  font-weight: bolder;
+}
+
+#details-paragraph-2 {
+  font-size: 14px;
+  color: #959595;
+  font-style: italic;
+  margin-top: -8px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+/* Section Inner (Product Display) */
+#section-2-inner-2 {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Gap between */
+  margin-top: 5%;
+  padding-bottom: 7.5%;
+  position: relative;
+  width: 100%;
+}
+
+/* Product Heading */
+#section-2-inner-2 .product h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 30px 0 5px; /* Spacing around */
+  text-align: left;
+}
+
+/* Product Description (Price) */
+#section-2-inner-2 .product p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #9a9a9a;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* Product Image Backgrounds for Women's Section */
+#square-4 {
+  background-image: url('images/women-01.jpg');
+}
+
+#square-5 {
+  background-image: url('images/women-02.jpg');
+}
+
+#square-6 {
+  background-image: url('images/women-03.jpg');
+}
+
+/* =========== SECTION 2: KID'S LATEST PRODUCTS =========== */
+
+/* Section Wrapper */
+.section-4-wrapper {
+  width: 100%;
+  border-bottom: 3px dotted rgb(230, 230, 230); /* Dotted bottom border */
+  margin-top: 5%; /* Space above */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+#latest-heading-4 {
+  font-size: 34px; 
+  text-align: left; 
+  margin-left: 50px; 
+  margin-bottom: 5px; /* Space below heading */
+  color: #333;
+  font-weight: bolder;
+}
+
+#details-paragraph-4 {
+  font-size: 14px;
+  color: #959595;
+  font-style: italic;
+  margin-top: -8px;
+  margin-left: 50px;
+  text-align: left;
+}
+
+/* Section Inner (Product Display) */
+#section-2-inner-4 {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Gap between */
+  margin-top: 5%;
+  padding-bottom: 7.5%;
+  position: relative;
+  width: 100%;
+}
+
+/* Product Heading */
+#section-2-inner-4 .product h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin: 30px 0 5px; /* Spacing around */
+  text-align: left;
+}
+
+/* Product Description (Price) */
+#section-2-inner-4 .product p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #9a9a9a;
+  text-align: left;
+  margin-top: 0;
+}
+
+/* Product Image Backgrounds for Kids' Section */
+#square-7 {
+  background-image: url('images/kid-01.jpg');
+}
+
+#square-8 {
+  background-image: url('images/kid-02.jpg');
+}
+
+#square-9 {
+  background-image: url('images/kid-03.jpg');
+}
+
+/* =========== EXPLORE OUR PRODUCTS =========== */
+
+/* Products Wrapper */
+.products-section-wrapper {
+  width: 100%;
+  border-bottom: 3px dotted rgb(230, 230, 230); /* Dotted bottom border */
+  padding-top: 5.5%;
+  padding-bottom: 6.4%;
+}
+
+#explore-products-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Left section for text content */
+#explore-text-left {
+  width: 48%;
+  padding-left: 3.5%;
+  text-align: left;
+}
+
+#explore-text-left h1 {
+  font-size: 34px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+
+#explore-text-left p {
+  font-size: 14.5px;
+  color: #959595;
+  margin-top: -8px;
+}
+
+/* Quote container with text and image */
+.quote-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quote {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 600;
+  color: #3e3e3e !important;
+  margin: 0;
+}
+
+.quote-image {
+  width: 7%;
+  height: auto;
+}
+
+/* Right section for product squares */
+#explore-products-right {
+  width: 48%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Space between items */
+  padding-right: 3.5%;
+}
+
+/* Individual product square styling */
+.product-square {
+  background-color: #f4f4f4;
+  width: 100%;
+  aspect-ratio: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.product-square h2 {
+  font-size: 95%;
+  color: #333;
+  margin-bottom: 5px; /* Space between heading and paragraph */
+  text-align: center;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.product-square p {
+  font-size: 14px;
+  color: #979797;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  white-space: normal;
+}
+
+/* Product square background images */
+#product-square-2 {
+  background-image: url('images/explore-image-01.jpg');
+}
+
+#product-square-3 {
+  background-image: url('images/explore-image-02.jpg');
+}
+
+/* =========== SOCIAL MEDIA SECTION =========== */
+
+/* Social Media Wrapper */
+.social-media-section-wrapper {
+  width: 100%;
+  border-bottom: 3px dotted rgb(230, 230, 230); /* Dotted bottom border */
+  padding-top: 5.5%;
+  padding-bottom: 6%;
+}
+
+#social-media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px; /* Restrict max width */
+  margin: auto;
+}
+
+.social-media-text-container {
+  width: 73.5%;
+  text-align: left;
+}
+
+#social-media-title {
+  font-size: 34px;
+  color: #333;
+  margin-bottom: -0.2%;
+}
+
+#social-media-description {
+  font-style: italic;
+  font-size: 88%;
+  margin-top: 0%;
+  margin-bottom: 4.3%;
+  color: #979797; /* Light gray text */
+}
+
+/* Social Media Box Container */
+.social-media-box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 80%;
+  max-width: 1200px;
+  margin-top: 1%;
+}
+
+/* Social Media Box Styles */
+.social-media-box {
+  width: 15.5%;
+  height: 0;
+  padding-bottom: 15%; /* Keep boxes square */
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  color: white;
+  font-size: 2vw; 
+  text-align: center;
+  box-sizing: border-box;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark Overlay */
+.social-media-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Darkens on hover */
+.social-media-box:hover::after {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Text Inside Social Media Box */
+.social-media-text {
+  position: absolute;
+  bottom: 10px; 
+  left: 15px; 
+  font-size: 1vw;
+  color: white;
+  font-weight: 500;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Fade-in effect */
+  z-index: 2; 
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Show text on hover */
+.social-media-box:hover .social-media-text {
+  opacity: 1;
+}
+
+/* Background Images for social media boxes */
+#social-media-1 {
+  background-image: url('images/instagram-01.jpg');
+}
+
+#social-media-2 {
+  background-image: url('images/instagram-02.jpg');
+}
+
+#social-media-3 {
+  background-image: url('images/instagram-03.jpg');
+}
+
+#social-media-4 {
+  background-image: url('images/instagram-04.jpg');
+}
+
+#social-media-5 {
+  background-image: url('images/instagram-05.jpg');
+}
+
+#social-media-6 {
+  background-image: url('images/instagram-06.jpg');
+}
+
+/* =========== SUBSCRIBE NEWSLETTER SECTION =========== */
+
+/* Subscribe Section Wrapper */
+.subscribe-section-wrapper {
+  width: 100%;
+  padding-top: 1.4%;
+  padding-bottom: 3.8%;
+}
+
+#subscribe-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1620px; /* Restrict max width */
+  margin: auto;
+  padding: 0 13%;
+}
+
+/* Left Side - Inputs */
+.subscribe-left {
+  width: 65%; /* Occupy part of the screen */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#subscribe-title {
+  font-size: 34px;
+  color: #333;
+  margin-bottom: -0.2%;
+}
+
+#subscribe-description {
+  font-style: italic;
+  font-size: 88%;
+  color: #979797;
+  margin-top: 0%;
+  margin-bottom: 3%;
+}
+
+/* Subscribe Input Fields */
+.subscribe-input {
+  width: 40%; 
+  height: 45px;
+  padding: 15px;
+  margin: 10px 5px 10px 0;
+  font-size: 16px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+}
+
+#name {
+  margin-right: 4%; /* Space between the name and email input */
+}
+
+/* Placeholder Styling */
+.subscribe-input::placeholder {
+  color: #6f6f6f;
+  font-style: italic;
+  font-size: 88%;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Email Submit Button */
+.email-button {
+  display: inline-block;
+  width: 45px; 
+  height: 45px;
+  border: 1px solid #333;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 23px; /* Space between button and input */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Email Button Image */
+.email-button img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  transition: filter 0.3s; /* Smooth transition for the icon color */
+}
+
+.email-button:hover {
+  background-color: white;
+}
+
+.email-button:hover img {
+  filter: invert(0); /* Change icon to black on hover */
+}
+
+/* Right Side - Contact Information */
+.subscribe-right {
+  margin-top: 45px; 
+  width: 34%; 
+  min-height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.subscribe-contact-box {
+  width: 55%;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  margin-right: 5%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.subscribe-contact-box:last-child {
+  margin-right: 0;
+}
+
+/* Heading in Contact Boxes */
+.subscribe-heading {
+  font-size: 16px; 
+  color: #333;
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  max-width: 100%; /* Prevent overflow */
+  text-align: left;
+}
+
+.subscribe-paragraph {
+  font-size: 14px;
+  color: #979797;
+  font-weight: normal;
+  margin-bottom: 25px;
+  white-space: normal;
+  overflow: hidden; /* Hide overflow */
+  word-wrap: break-word; /* Break long words */
+  max-width: 100%;
+  text-align: left;
+}
+
+/* Links inside Paragraphs */
+.subscribe-paragraph a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.subscribe-paragraph a:hover {
+  color: #333;
+}
+
+/* =========== FOOTER  ===========*/
+
+/* Footer Wrapper */
+.footer-wrapper {
+  width: 100%;
+  min-height: 485px;
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  width: 74%;
+  max-width: 1130px;
+  min-height: 400px;
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Footer Boxes (1-4) */
+.footer-box {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 23%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 24px;
+  color: white;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.footer-box h3 {
+  font-size: 17px;
+  margin-bottom: 7px;
+  color: white;
+}
+
+/* First Footer Box (Logo & Contact Info) */
+.footer-box:nth-child(1) {
+  justify-content: flex-start;
+}
+
+.footer-box:nth-child(1) img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: rgb(169, 169, 169);
+  transition: color 0.3s ease-in-out;
+}
+
+/* Footer Box Margins */
+.footer-box:nth-child(1),
+.footer-box:nth-child(2),
+.footer-box:nth-child(3) {
+  margin-right: 20px;
+}
+
+/* Footer Credits Section */
+.footer-box-credits {
+  border-top: 1px solid rgb(104, 104, 104);
+  margin-top: 40px;
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.footer-box-credits-inner {
+  width: 390px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+}
+
+.footer-box-credits-inner p {
+  font-size: 14px;
+  color: white;
+  margin: 2px 0;
+}
+
+/* Footer Credit Links */
+.footer-credit-link {
+  color: rgb(193, 230, 243);
+  text-decoration: none;
+}
+
+.footer-credit-link:hover {
+  color: rgb(173, 96, 71);
+  transition: color 0.1s ease-in-out;
+}
+
+/* Social Media Links */
+.footer-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 20px;
+}
+
+.footer-social-links .social-link img {
+  width: 30px;
+  transition: filter 0.1s ease-in-out;
+}
+
+.footer-social-links .social-link img:hover {
+  filter: brightness(0) saturate(100%)
+          invert(50%) sepia(85%)
+          saturate(300%) hue-rotate(320deg)
+          brightness(90%) contrast(100%);
+}
+
+/* Responsive Design for other Devices */
