@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loops_arrays.SumOfEven.App", "loops_arrays.SumOfEven.App\loops_arrays.SumOfEven.App.csproj", "{18083105-B639-4CC8-9881-2C6ED50E9DCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loops_arrays.StudentGroup.App", "loops_arrays.StudentGroup.App\loops_arrays.StudentGroup.App.csproj", "{E11A8E62-5B2C-4A90-84A4-112595C960A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{18083105-B639-4CC8-9881-2C6ED50E9DCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18083105-B639-4CC8-9881-2C6ED50E9DCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18083105-B639-4CC8-9881-2C6ED50E9DCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11A8E62-5B2C-4A90-84A4-112595C960A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11A8E62-5B2C-4A90-84A4-112595C960A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11A8E62-5B2C-4A90-84A4-112595C960A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11A8E62-5B2C-4A90-84A4-112595C960A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

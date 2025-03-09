@@ -4,20 +4,22 @@
     {
         static void Main(string[] args)
         {
+            // Note * Using functions for this homework wasn't specified
+            // However, knowing it's good practice and I decided for a cleaner approach
 
             int[] numbers = new int[6];
 
             Console.WriteLine("Enter 6 integers. The even numbers will be summed");
 
-            GetValidInputs(numbers);
+            GetInputs(numbers);
 
             int sum = CalculateSumOfEvens(numbers);
 
             Console.WriteLine($"The result is: {sum}");
         }
 
-        // Check if input is a valid integer (because some may try to break the program)
-        static void GetValidInputs(int[] numbers)
+        // Check if input is a valid integer (failsafe, prevent user from accidentally or intentionally breaking the program)
+        static void GetInputs(int[] numbers)
         {
             for (int i = 0; i < numbers.Length; i++)
             {
